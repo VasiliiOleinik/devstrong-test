@@ -1,0 +1,137 @@
+.header
+  &--info
+    background: $dark
+    height: 45px
+    color: #ffffff
+    margin-bottom: 50px
+    &__nav
+      & .info--nav__item
+        margin-right: 30px
+        padding-right: 30px
+        position: relative
+        & a
+          font-size: 14px
+          transition: $linear
+          &:hover
+            transition: $linear
+            color: $light-blue
+        &:not(:last-of-type):after
+          content: ''
+          width: 10px
+          height: 10px
+          border: 1px solid $gray
+          border-radius: 50%
+          position: absolute
+          right: 0
+          top: 50%
+          transform: translateY(-50%)
+          display: block
+    &__contact
+      & span
+        font-size: 13px
+        margin-right: 40px
+      & a
+        font-size: 20px
+        color: $light-blue
+        font-weight: bold
+        line-height: 1.25
+  &--main
+    margin-bottom: 50px
+    & .header--logo
+      font-size: 50px
+      color: $light-blue
+      line-height: 0.392
+      font-weight: bold
+      margin-right: 30px
+      max-width: 265px
+      width: 100%
+    & .header--search
+      max-width: 555px
+      margin-right: 50px
+      & form
+        height: 40px
+        border: 1px solid  rgb(221, 221, 221)
+        border-radius: 4px
+        & input
+          padding: 15px 25px
+          width: calc(100% - 55px)
+          font-size: 14px
+          color: rgb(29, 30, 30)
+          line-height: 1.786
+          text-align: left
+          transition: $linear
+        & button
+          width: 55px
+          height: 100%
+          & path
+            fill: $dark
+            transition: $linear
+          &:hover
+            & path
+              fill: $light-blue
+              transition: $linear
+    & .header--icons
+      &__link
+        position: relative
+        & .icon--notification
+          position: absolute
+          right: -10px
+          top: -10px
+          color: $light-blue
+          font-size: 16px
+          font-weight: bold
+          line-height: 1.563
+
+        & path
+          transition: $linear
+          fill: $dark
+        &:hover
+          & path
+            fill: $light-blue
+            transition: $linear
+        &:not(:last-of-type)
+          margin-right: 70px
+  &--nav
+    height: 60px
+    background: #efefef
+    & .catalog--btn
+      max-width: 265px
+      width: 100%
+      border-radius: 4px
+      height: 100%
+      background: $lightToDark
+    & .nav--list
+      &__link
+        padding: 0px 35px
+        font-size: 14px
+        color: $dark
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 1.786
+        transition: $linear
+        position: relative
+        &:last-of-type
+          padding-right: 0px
+        &:not(:last-of-type)
+          margin-right: 5px
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 50%
+          transform: translateX(-50%)
+          width: 0
+          height: 0
+          border-left: 10px solid transparent
+          border-right: 10px solid transparent
+          border-top: 10px solid #ffffff
+          display: block
+          opacity: 0
+          transition: $linear
+        &:hover,
+        &.active
+          transition: $linear
+          color: $light-blue
+          &:before
+            opacity: 1
+            transition: $linear
